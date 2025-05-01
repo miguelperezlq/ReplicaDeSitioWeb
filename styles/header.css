@@ -1,0 +1,174 @@
+/* Estructura Principal */
+.header {
+  max-width: 1200px;
+  margin: 5px auto;
+}
+
+/* Barra superior */
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+}
+
+/* Enlaces de la izquierda (crear cuenta / iniciar sesion) */
+.left__link {
+  text-decoration: none;
+  color: #111;
+  margin: 0 5px;
+}
+
+/* Enlaces de la derecha (iconos y redes sociales) */
+.right__link {
+  text-decoration: none;
+  color: #111;
+  margin: 0 5px;
+}
+
+.right__link--icono {
+  width: 15px;
+}
+
+/* logo y descripcion */
+.logo {
+  text-align: center;
+  padding: 30px 0 20px;
+  font-weight: 300;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo__title {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.logo_description {
+  font-size: 14px;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+/* menu principal */
+.menu {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  background-color: #fff;
+}
+
+.menu__list {
+  list-style: none;
+  padding: 8px 0;
+}
+
+.menu__list li {
+  display: inline-block;
+  line-height: 40px;
+  margin: 0 5px;
+  padding: 0;
+}
+
+.menu__link {
+  margin: 0 15px;
+  text-decoration: none;
+  transition: background-color 0.5s;
+  color: #111;
+  font-weight: 500;
+}
+
+.menu__list li:hover {
+  background-color: #efefef;
+  transition: 0.2s;
+  /* padding: 1rem 0.8rem; */
+}
+
+/* Imagen Principal */
+.header__img {
+  width: 100%;
+}
+
+/* Boton para el menu responsivo */
+/* icono hamburguesa(oculto por defecto) */
+.checkbtn {
+  font-size: 30px;
+  color: rgb(9, 9, 9);
+  float: left;
+  margin-top: 25px;
+  line-height: 80px;
+  margin-left: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Checkbox oculto para el menu responsivo */
+#check {
+  display: none;
+}
+
+/* Media Query - 850px */
+@media(max-width: 850px) {
+
+  /* mostrar icono Hamburguesa */
+  .checkbtn {
+    display: inline-block;
+    margin-top: -5px;
+    margin-right: 5px;
+    font-size: 30px;
+  }
+
+  /* Menu desplegable */
+  .menu__list {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    top: 54px;
+    left: -120%;
+    text-align: center;
+    transition: all 0.3s;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu__list li {
+    display: block;
+    margin: 0;
+    padding: 2%;
+    height: 35px;
+    line-height: 30px;
+  }
+
+  .menu__link {
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  /* Activar munu al clickear el icono */
+  #check:checked~.menu .menu__list {
+    left: 0;
+  }
+
+  /* Ajustes en barra superior */
+  .header__top .left {
+    display: none;
+  }
+
+  .header__top {
+    justify-content: center;
+  }
+
+  .menu__list li:hover,
+  .menu__list li:active {
+    background-color: #efefef;
+    border-radius: 5px;
+    margin-left: 0;
+  }
+
+  .menu__link:hover {
+    background: none;
+  }
+}

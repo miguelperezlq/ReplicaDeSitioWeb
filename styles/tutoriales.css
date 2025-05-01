@@ -1,0 +1,56 @@
+/* Tutoriales */
+.tutoriales{
+  max-width: 1200px;
+  margin: 5px auto;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.breadcrumbs {
+  padding: 20px 40px;
+  font-size: 1em;
+  color: #000;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #000;
+  margin-right: 5px;
+}
+
+.breadcrumbs span {
+  margin: 0 5px;
+  color: #888;
+}
+
+.titulo {
+  text-align: center;
+  font-weight: 300;
+  font-size: 2em;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.contenido img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.link__tutorial{
+  display: block;
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .tutoriales {
+    padding: 40px 15px 60px 15px;
+  }
+}

@@ -1,0 +1,130 @@
+/* categorias */
+.productos__categorias {
+  background-color: #f2f5f1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.productos__categorias p {
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+/* Botones de filtro */
+.productos__botones button {
+  margin: 0 0.5rem;
+  padding: 10px 20px;
+  border: 1px solid #333;
+  background-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+.boton {
+  text-decoration: none;
+  color: gray;
+}
+
+/* Titulo y seccion Principal */
+.productos__presets {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.productos__presets h2 {
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+/* Grid de productos */
+.productos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  padding: 0 1rem;
+}
+
+/* Card de productos */
+.producto {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.producto h3 {
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+/* imagen de producto */
+.producto__img {
+  position: relative;
+}
+
+.producto__img img {
+  width: 100%;
+  display: block;
+}
+
+/* Precio y descuento */
+.producto__descuento {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #eaeaea;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.producto__precio {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.2rem;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.precio-original {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.precio-descuento {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.cuotas {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 0.2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .productos__grid {
+      grid-template-columns: repeat(2, 1fr); /* 🔸 2 columnas en tablets */
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    .productos__botones {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .productos__botones button {
+      width: 80%;
+      margin-bottom: 10px;
+    }
+
+}

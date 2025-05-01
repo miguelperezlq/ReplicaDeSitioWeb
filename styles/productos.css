@@ -1,0 +1,128 @@
+/* Productos */
+.contenedorProductos {
+    max-width: 1200px;
+    margin: 5px auto;
+    display: flex;
+    padding: 0 1rem;
+    gap: 2rem;
+}
+
+.breadcrumbs {
+    max-width: 1200px;
+    margin: 5px auto;
+    padding-top: 60px;
+    font-size: 1em;
+    color: #000;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: #000;
+    margin-right: 5px;
+}
+
+.breadcrumbs span {
+    margin: 0 5px;
+    color: #888;
+}
+
+/* Sidebar */
+aside {
+    min-width: 200px;
+}
+
+aside h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+aside ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+aside ul li {
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+}
+
+aside ul li:hover {
+    text-decoration: underline;
+}
+
+/* seccion de productos */
+.products-section {
+    flex: 1;
+}
+
+.products-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.products-header select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0.5rem 2rem 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    position: relative;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 12px;
+    cursor: pointer;
+}
+
+.productos__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+  /* Responsive */
+@media (max-width: 850px) {
+    .productos__grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .productos__botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productos__botones button {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .contenedorProductos {
+        display: block;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    aside {
+        display: none;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .productos__grid {
+        grid-template-columns: 1fr;
+    }
+    .products-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
